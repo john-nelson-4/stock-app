@@ -18,7 +18,7 @@ streamlit run app.py
 ```
 
 ## Live App
-(Add your Streamlit link here once deployed)
+[View the live dashboard](https://stock-app-ndjbxqvjmsemxrhcwhnvaw.streamlit.app/)
 
 ## Author
 John Nelson
