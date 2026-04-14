@@ -1,10 +1,21 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+# Virtual environment (managed by uv — don't upload to GitHub)
+.venv/
 
-# Virtual environments
-.venv
+# Python cache files
+__pycache__/
+*.pyc
+
+# uv project files (Streamlit Cloud uses requirements.txt instead)
+.python-version
+pyproject.toml
+uv.lock
+
+# Environment variables / secrets (uncomment if you add a .env file)
+# .env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+#AI said smart to add just in case (but optional)
+.streamlit/
