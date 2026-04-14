@@ -1,7 +1,7 @@
 [project]
 name = "stock-analysis-app"
 version = "0.1.0"
-description = "Add your description here"
+description = description = "Interactive stock analysis dashboard for returns, risk, and portfolio optimization"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -9,4 +9,7 @@ dependencies = [
     "plotly>=6.6.0",
     "streamlit>=1.55.0",
     "yfinance>=1.0",
+    "numpy",
+    "scipy",
+    "matplotlib"
 ]
