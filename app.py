@@ -89,10 +89,10 @@ if (end_date - start_date).days < 365 * 2:
 @st.cache_data(show_spinner="Fetching data...", ttl=3600)
 def load_data(tickers: list[str], start_date: date, end_date: date) -> tuple[pd.DataFrame, list[str]]:
     """
-    Download adjusted close-equivalent prices for selected tickers plus S&P 500 benchmark
-    in one batch request.
 
-    With auto_adjust=True, yfinance adjusts prices for splits/dividends and stores them in 'Close'.
+    Download adjusted close prices for selected tickers plus the S&P 500 benchmark
+    in one batch request using yfinance.
+
     """
     all_tickers = tickers + ["^GSPC"]
     failed = []
