@@ -930,7 +930,7 @@ with tab5:
                 "Sharpe": (gmv_ret - rf_annual) / gmv_vol,
                 **{ticker: gmv_w[i] for i, ticker in enumerate(valid_tickers)}
             })
-            
+
         if tan_res.success:
             tan_w = tan_res.x
             tan_ret = portfolio_return(tan_w, temp_mu.values)
@@ -1006,7 +1006,7 @@ with tab6:
     - Annualized volatility = daily standard deviation × sqrt(252)
     - Sortino uses downside deviation only
     - Risk-free rate input is annualized and converted to a daily rate by dividing by 252
-    - Prices are based on adjusted close-equivalent data from Yahoo Finance
+    - Prices are based on adjusted close prices from Yahoo Finance
     - Portfolio optimization uses no-short-selling constraints (weights between 0 and 1, sum to 1)
     """)
     
