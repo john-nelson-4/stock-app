@@ -919,14 +919,18 @@ with tab5:
 
         if gmv_res.success:
             gmv_w = gmv_res.x
+            gmv_ret = portfolio_return(gmv_w, temp_mu.values)
+            gmv_vol = portfolio_vol(gmv_w, temp_cov.values)
+
             sensitivity_rows.append({
                 "Window": label,
                 "Portfolio": "GMV",
-                "Return": portfolio_return(gmv_w, temp_mu.values),
-                "Volatility": portfolio_vol(gmv_w, temp_cov.values),
+                "Return": gmv_ret,
+                "Volatility": gmv_vol,
+                "Sharpe": (gmv_ret - rf_annual) / gmv_vol,
                 **{ticker: gmv_w[i] for i, ticker in enumerate(valid_tickers)}
             })
-
+            
         if tan_res.success:
             tan_w = tan_res.x
             tan_ret = portfolio_return(tan_w, temp_mu.values)
